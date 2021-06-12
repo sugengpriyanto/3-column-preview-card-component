@@ -1,2 +1,153 @@
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark: hsl(179, 100%, 13%);
+    --transparent: hsla(0, 0%, 100%, 0.75);
+    --lightgray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*built-in style*/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+/*start here*/
+body {
+    background-color: var(--lightgray);
+    font-size: 15px;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 25vh;
+    margin-bottom: 25vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    border-radius: 10px;
+    border: none;
+}
+
+.card {
+    flex: 1;
+    padding: 5%;
+}
+
+.card-header {
+    margin-bottom: 20px;
+}
+
+.title {
+    color: var(--lightgray);
+    font-family: Big Shoulders Display;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
+.card-content {
+    font-family: Lexend Deca;
+    margin: 35px 0px 100px 0px;
+    line-height: 2em;
+}
+
+.card-content p {
+    color: var(--transparent);
+}
+
+#sedan {
+    background-color: var(--orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#suv {
+    background-color: var(--cyan);
+}
+
+#luxury {
+    background-color: var(--dark);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-footer {
+    padding-bottom: 20px;
+}
+
+.btn {
+    background-color: var(--lightgray);
+    border: 1px solid var(--lightgray);
+    border-radius: 25px;
+    padding: 0.7em 2em;
+    text-decoration: none;
+    font-family: Lexend Deca;
+    cursor: pointer;
+}
+
+.sedan {
+    color: var(--orange);
+}
+.suv {
+    color: var(--cyan);
+}
+.luxury {
+    color: var(--dark);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--transparent);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding-top: 10vh;
+    }
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .card {
+        padding: 10% 15%;
+    }
+
+    .card-header {
+        margin-top: 20px;
+    }
+
+    .title {
+        padding-top: 15px;
+    }
+
+    #sedan {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    #luxury {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+
+    .card-content {
+        margin-bottom: 50px;
+    }
+
+    .card-footer {
+        padding-bottom: 20px;
+        padding-top: 0px;
+    }
+}
